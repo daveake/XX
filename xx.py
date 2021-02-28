@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import urllib.parse
 import urllib.request
 import json
@@ -17,8 +19,13 @@ def get_position(PayloadID):
 	print("Checking payload " + PayloadID)
 	
 	req = urllib.request.Request(url)
-	with urllib.request.urlopen(req) as response:
-		result = response.read()			# content = urllib.request.urlopen(url=url, data=data).read()
+	try:
+		with urllib.request.urlopen(req) as response:
+			result = response.read()			# content = urllib.request.urlopen(url=url, data=data).read()
+	except Exception as e:
+		print ("Failed to download")
+		return None
+
 	# print(result)
 	
 	result = result.decode('utf-8')
@@ -109,5 +116,5 @@ while True:
 					
 				gps_time[index] = position['gps_time']
 			
-		time.sleep(1)
+		time.sleep(10)
 
