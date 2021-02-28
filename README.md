@@ -1,4 +1,15 @@
 # XX
+
+** OLD AND DEPRECATED **
+
+This script is no longer required, since the SNUS now has the same ability to add X for the prediction, but for any number of payloads not just one.
+
+** SO PLEASE DO NOT USE! **
+
+Just set the payload document as described below and SNUS will do the rest.
+
+----
+
 Uploads "X marks the spot" position to habhub, using predicted landing position from a HAB
 
 This script can be used where a balloon payload predicts its own landing position.
